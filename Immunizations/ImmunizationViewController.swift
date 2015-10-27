@@ -19,7 +19,8 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
 
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 31/255, green: 29/255, blue: 75/255, alpha: 1)
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         scrollView.delegate = self

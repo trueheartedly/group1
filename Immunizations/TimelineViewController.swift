@@ -25,6 +25,7 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         scrollView.contentSize = contentView.frame.size
  
+        self.title = userFirstName! + "’s Vaccinations"
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
 
@@ -34,10 +35,16 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         
-        //photoImageView.image = GlobalVariables.userPhotoImage.image
-       // pageTitle?.text = userFirstName + "’s Vaccinations"
-        //firstName?.text = userFirstName + "’s Birthday"
-        //birthdate?.text = userBirthdate
+        photoImageView.image = userPhotoImage
+        
+        // mask photo as a circle
+        photoImageView.layer.cornerRadius = photoImageView.frame.size.height/2
+        photoImageView.layer.masksToBounds = true
+        photoImageView.layer.borderWidth = 0
+        
+        pageTitle.text = userFirstName! + "’s Vaccinations"
+        firstName.text = userFirstName! + "’s Birthday"
+        birthdate?.text = userBirthdate
     }
 
     
@@ -82,7 +89,7 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -90,6 +97,6 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

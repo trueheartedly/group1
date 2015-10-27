@@ -47,15 +47,29 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var remindMeButton: UIButton!
     
     
+    
+    var localNotification = UILocalNotification()
 
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        application.applicationIconBadgeNumber = 0
+    }
 
     
-    
+
     
 // VIEW DID LOAD ------------------------------------------------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        localNotification.alertBody = "Upcoming Vaccination Due by November 1"
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        
         
         imagePicker.delegate = self
 
@@ -178,7 +192,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         //userSex = sexLabel.text
         
 // TO IMPLEMENT:
-        //userPhotoImage = photoImageView.image
+        userPhotoImage = photoImageView.image
         
     }
     
