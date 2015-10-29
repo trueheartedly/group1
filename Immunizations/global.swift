@@ -6,10 +6,11 @@
 //  Copyright © 2015 Group 1. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 var userReceiveReminders: Bool! = true
-var userPhotoImage: String?
+var userPhotoImage: UIImage?
 var userFirstName: String?
 var userMiddleInitial: String?
 var userLastName: String?
