@@ -1,6 +1,6 @@
 //
 //  ImmunizationViewController.swift
-//  Immunizations
+//  Booster
 //
 //  Created by James Taylor on 10/25/15.
 //  Copyright © 2015 Group 1. All rights reserved.
