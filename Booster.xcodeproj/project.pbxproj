@@ -15,7 +15,14 @@
 		2C361EDC1BDD7559000A28C6 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C361EDB1BDD7559000A28C6 /* Global.swift */; };
 		2C361EE01BDDD116000A28C6 /* ImmunizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C361EDF1BDDD116000A28C6 /* ImmunizationViewController.swift */; };
 		2C361EE31BDDD41E000A28C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C361EE11BDDD41E000A28C6 /* Main.storyboard */; };
-		2C96DA361BE31E260008901F /* Gotham_Rounded in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA351BE31E260008901F /* Gotham_Rounded */; };
+		2C96DA3F1BE31F650008901F /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA371BE31F650008901F /* GothamRnd-Bold.otf */; };
+		2C96DA401BE31F650008901F /* GothamRnd-BoldIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA381BE31F650008901F /* GothamRnd-BoldIta.otf */; };
+		2C96DA411BE31F650008901F /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA391BE31F650008901F /* GothamRnd-Book.otf */; };
+		2C96DA421BE31F650008901F /* GothamRnd-BookIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA3A1BE31F650008901F /* GothamRnd-BookIta.otf */; };
+		2C96DA431BE31F650008901F /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA3B1BE31F650008901F /* GothamRnd-Light.otf */; };
+		2C96DA441BE31F650008901F /* GothamRnd-LightIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA3C1BE31F650008901F /* GothamRnd-LightIta.otf */; };
+		2C96DA451BE31F650008901F /* GothamRnd-MedIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA3D1BE31F650008901F /* GothamRnd-MedIta.otf */; };
+		2C96DA461BE31F650008901F /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA3E1BE31F650008901F /* GothamRnd-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +36,14 @@
 		2C361EDB1BDD7559000A28C6 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2C361EDF1BDDD116000A28C6 /* ImmunizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmunizationViewController.swift; sourceTree = "<group>"; };
 		2C361EE21BDDD41E000A28C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2C96DA351BE31E260008901F /* Gotham_Rounded */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Gotham_Rounded; sourceTree = "<group>"; };
+		2C96DA371BE31F650008901F /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRnd-Bold.otf"; path = "Immunizations/Gotham_Rounded/GothamRnd-Bold.otf"; sourceTree = "<group>"; };
+		2C96DA381BE31F650008901F /* GothamRnd-BoldIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRnd-BoldIta.otf"; path = "Immunizations/Gotham_Rounded/GothamRnd-BoldIta.otf"; sourceTree = "<group>"; };
+		2C96DA391BE31F650008901F /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRnd-Book.otf"; path = "Immunizations/Gotham_Rounded/GothamRnd-Book.otf"; sourceTree = "<group>"; };
+		2C96DA3A1BE31F650008901F /* GothamRnd-BookIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRnd-BookIta.otf"; path = "Immunizations/Gotham_Rounded/GothamRnd-BookIta.otf"; sourceTree = "<group>"; };
+		2C96DA3B1BE31F650008901F /* GothamRnd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRnd-Light.otf"; path = "Immunizations/Gotham_Rounded/GothamRnd-Light.otf"; sourceTree = "<group>"; };
+		2C96DA3C1BE31F650008901F /* GothamRnd-LightIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRnd-LightIta.otf"; path = "Immunizations/Gotham_Rounded/GothamRnd-LightIta.otf"; sourceTree = "<group>"; };
+		2C96DA3D1BE31F650008901F /* GothamRnd-MedIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRnd-MedIta.otf"; path = "Immunizations/Gotham_Rounded/GothamRnd-MedIta.otf"; sourceTree = "<group>"; };
+		2C96DA3E1BE31F650008901F /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRnd-Medium.otf"; path = "Immunizations/Gotham_Rounded/GothamRnd-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +60,7 @@
 		2C10888E1BDC134D00CB19E2 = {
 			isa = PBXGroup;
 			children = (
+				2C96DA481BE31F8A0008901F /* Resources */,
 				2C1088991BDC134E00CB19E2 /* Booster */,
 				2C1088981BDC134D00CB19E2 /* Products */,
 			);
@@ -62,7 +77,6 @@
 		2C1088991BDC134E00CB19E2 /* Booster */ = {
 			isa = PBXGroup;
 			children = (
-				2C96DA351BE31E260008901F /* Gotham_Rounded */,
 				2C10889A1BDC134E00CB19E2 /* AppDelegate.swift */,
 				2C361EDB1BDD7559000A28C6 /* Global.swift */,
 				2C1088AC1BDC1D1700CB19E2 /* AddUserViewController.swift */,
@@ -75,6 +89,21 @@
 			);
 			name = Booster;
 			path = Immunizations;
+			sourceTree = "<group>";
+		};
+		2C96DA481BE31F8A0008901F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C96DA371BE31F650008901F /* GothamRnd-Bold.otf */,
+				2C96DA381BE31F650008901F /* GothamRnd-BoldIta.otf */,
+				2C96DA391BE31F650008901F /* GothamRnd-Book.otf */,
+				2C96DA3A1BE31F650008901F /* GothamRnd-BookIta.otf */,
+				2C96DA3B1BE31F650008901F /* GothamRnd-Light.otf */,
+				2C96DA3C1BE31F650008901F /* GothamRnd-LightIta.otf */,
+				2C96DA3D1BE31F650008901F /* GothamRnd-MedIta.otf */,
+				2C96DA3E1BE31F650008901F /* GothamRnd-Medium.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +164,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C96DA3F1BE31F650008901F /* GothamRnd-Bold.otf in Resources */,
+				2C96DA401BE31F650008901F /* GothamRnd-BoldIta.otf in Resources */,
+				2C96DA411BE31F650008901F /* GothamRnd-Book.otf in Resources */,
+				2C96DA421BE31F650008901F /* GothamRnd-BookIta.otf in Resources */,
+				2C96DA431BE31F650008901F /* GothamRnd-Light.otf in Resources */,
+				2C96DA441BE31F650008901F /* GothamRnd-LightIta.otf in Resources */,
+				2C96DA451BE31F650008901F /* GothamRnd-MedIta.otf in Resources */,
+				2C96DA461BE31F650008901F /* GothamRnd-Medium.otf in Resources */,
 				2C361EE31BDDD41E000A28C6 /* Main.storyboard in Resources */,
 				2C1088A51BDC134E00CB19E2 /* LaunchScreen.storyboard in Resources */,
-				2C96DA361BE31E260008901F /* Gotham_Rounded in Resources */,
 				2C1088A21BDC134E00CB19E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
