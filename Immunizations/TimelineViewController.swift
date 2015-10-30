@@ -42,7 +42,7 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         photoImageView.layer.masksToBounds = true
         photoImageView.layer.borderWidth = 0
         
-        pageTitle.text = userFirstName! + "’s Vaccinations"
+        //pageTitle.text = userFirstName! + "’s Vaccinations"
         firstName.text = userFirstName! + "’s Birthday"
         birthdate?.text = userBirthdate
     }

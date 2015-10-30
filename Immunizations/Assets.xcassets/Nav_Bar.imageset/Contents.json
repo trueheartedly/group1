@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Create_Record Copy.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Nav_Bar.png",
       "scale" : "2x"
     },
     {

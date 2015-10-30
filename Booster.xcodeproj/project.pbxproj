@@ -15,6 +15,7 @@
 		2C361EDC1BDD7559000A28C6 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C361EDB1BDD7559000A28C6 /* Global.swift */; };
 		2C361EE01BDDD116000A28C6 /* ImmunizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C361EDF1BDDD116000A28C6 /* ImmunizationViewController.swift */; };
 		2C361EE31BDDD41E000A28C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C361EE11BDDD41E000A28C6 /* Main.storyboard */; };
+		2C96DA361BE31E260008901F /* Gotham_Rounded in Resources */ = {isa = PBXBuildFile; fileRef = 2C96DA351BE31E260008901F /* Gotham_Rounded */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2C361EDB1BDD7559000A28C6 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2C361EDF1BDDD116000A28C6 /* ImmunizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmunizationViewController.swift; sourceTree = "<group>"; };
 		2C361EE21BDDD41E000A28C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C96DA351BE31E260008901F /* Gotham_Rounded */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Gotham_Rounded; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		2C1088991BDC134E00CB19E2 /* Booster */ = {
 			isa = PBXGroup;
 			children = (
+				2C96DA351BE31E260008901F /* Gotham_Rounded */,
 				2C10889A1BDC134E00CB19E2 /* AppDelegate.swift */,
 				2C361EDB1BDD7559000A28C6 /* Global.swift */,
 				2C1088AC1BDC1D1700CB19E2 /* AddUserViewController.swift */,
@@ -134,6 +137,7 @@
 			files = (
 				2C361EE31BDDD41E000A28C6 /* Main.storyboard in Resources */,
 				2C1088A51BDC134E00CB19E2 /* LaunchScreen.storyboard in Resources */,
+				2C96DA361BE31E260008901F /* Gotham_Rounded in Resources */,
 				2C1088A21BDC134E00CB19E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
