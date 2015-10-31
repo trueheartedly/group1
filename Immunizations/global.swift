@@ -14,5 +14,8 @@ var userPhotoImage: UIImage?
 var userFirstName: String?
 var userMiddleInitial: String?
 var userLastName: String?
-var userBirthdate: String?
+var userBirthDate = NSDate()
+var userBirthDateString: String?
+var hepBShot2Date = NSDate()
 var userSex: String?
+var userPronoun: String?
