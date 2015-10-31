@@ -84,15 +84,17 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         
         
         
-        // CONSIDER SETTING NOTIFICATION TO FIRST DUE DATE
-        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
-        localNotification.alertBody = "\(userFirstName!) is due for \(userPronoun!) Hepatitis B Vaccination in \(daysToHepShot2Due) days"
-        localNotification.timeZone = NSTimeZone.defaultTimeZone()
-        localNotification.soundName = UILocalNotificationDefaultSoundName
-        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        // SET NOTIFICATION
         
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-
+        if userReceiveReminders == true {
+            localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+            localNotification.alertBody = "\(userFirstName!) is due for \(userPronoun!) Hepatitis B Vaccination in \(daysToHepShot2Due) days"
+            localNotification.timeZone = NSTimeZone.defaultTimeZone()
+            localNotification.soundName = UILocalNotificationDefaultSoundName
+            localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+            
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        }
     }
 
     
