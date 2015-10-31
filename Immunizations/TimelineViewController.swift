@@ -14,14 +14,30 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var contentView: UIView!
 
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var pageTitle: UILabel!
+
 //--TO IMPLEMENT: PRESERVE PHOTO FROM PRIOR SCREEN
     
     @IBOutlet weak var firstName: UILabel!
     @IBOutlet weak var birthdate: UILabel!
-
+    
+    var localNotification = UILocalNotification()
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        application.applicationIconBadgeNumber = 0
+        // Point for handling the local notification when the app is open.
+        // Showing reminder details in an alertview
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if userSex == "M" {
+            userPronoun = "his"
+        } else {
+            userPronoun = "her"
+        }
+        
+
         scrollView.delegate = self
         scrollView.contentSize = contentView.frame.size
  
@@ -44,7 +60,39 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         
         //pageTitle.text = userFirstName! + "’s Vaccinations"
         firstName.text = userFirstName! + "’s Birthday"
-        birthdate?.text = userBirthdate
+        birthdate?.text = userBirthDateString
+        
+        
+        
+        
+        // calculate time before next hep b shot is due
+        let calendar: NSCalendar = NSCalendar.currentCalendar()
+        
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDayForDate(NSDate())
+        let date2 = calendar.startOfDayForDate(hepBShot2Date)
+        
+        //let flags = NSCalendarUnit.DayCalendarUnit
+        let components = calendar.components(.Day, fromDate: date1, toDate: date2, options: [])
+        
+        let daysToHepShot2Due = components.day  // This will return the number of day(s) between dates
+        
+        
+        
+        print(daysToHepShot2Due)
+        
+        
+        
+        
+        // CONSIDER SETTING NOTIFICATION TO FIRST DUE DATE
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        localNotification.alertBody = "\(userFirstName!) is due for \(userPronoun!) Hepatitis B Vaccination in \(daysToHepShot2Due) days"
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+
     }
 
     

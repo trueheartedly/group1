@@ -10,6 +10,7 @@ import UIKit
 
 class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
         
+    @IBOutlet weak var firstName: UILabel!
         
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -18,6 +19,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 31/255, green: 29/255, blue: 75/255, alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
@@ -25,6 +27,10 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.delegate = self
         scrollView.contentSize = imageView.image!.size
+        
+        //firstName.text = userFirstName! + "’s Progress"
+        print(userFirstName! + "’s Progress")
+
         
     }
 
