@@ -489,6 +489,99 @@
                                         <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="JX8-NM-A2f">
+                                        <rect key="frame" x="16" y="167" width="345" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gXS-Xr-hdJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <connections>
+                                                    <action selector="didPressHepB2:" destination="SPR-As-EVJ" eventType="touchUpInside" id="lsl-jH-VbF"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second shot on the 1st month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gee-gy-lrh">
+                                                <rect key="frame" x="47" y="11" width="283" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
+                                                <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vC0-Rg-ygb">
+                                                <rect key="frame" x="15" y="100" width="315" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.22352941179999999" green="0.87450980389999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <state key="normal" title="Complete">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressHepB2Complete:" destination="SPR-As-EVJ" eventType="touchUpInside" id="YIJ-T0-sdt"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Immunization_Step_2" id="hwl-CH-vVy">
+                                                <rect key="frame" x="15" y="10" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox-selected" id="n2m-cK-pLJ">
+                                                <rect key="frame" x="16" y="11" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tCT-Af-6X2">
+                                                <rect key="frame" x="250" y="10" width="85" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="12"/>
+                                                <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="3m9-RU-sIe" userLabel="Shot Date">
+                                                <rect key="frame" x="15" y="45" width="315" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G1b-Hg-6qm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                        <connections>
+                                                            <action selector="didPressDatePicker:" destination="SPR-As-EVJ" eventType="touchUpInside" id="BXA-B5-T9Z"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NbP-dG-3IL">
+                                                        <rect key="frame" x="15" y="10" width="153" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
+                                                        <color key="textColor" red="0.66666666669999997" green="0.72156862749999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cLL-re-EOr">
+                                                <rect key="frame" x="315" y="11" width="16" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <state key="normal" image="Close_Button"/>
+                                                <connections>
+                                                    <action selector="didPressHepB2:" destination="SPR-As-EVJ" eventType="touchUpInside" id="AeB-Qy-1o7"/>
+                                                    <action selector="didPressHepB2Close:" destination="SPR-As-EVJ" eventType="touchUpInside" id="Tad-4J-VVC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <view hidden="YES" contentMode="scaleToFill" id="wGy-CV-crp">
                                         <rect key="frame" x="0.0" y="341" width="375" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -519,128 +612,6 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="vV0-DZ-uI6">
-                                        <rect key="frame" x="1" y="123" width="375" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShotTableViewCell" rowHeight="40" id="8pi-MM-Fm4" customClass="ShotTableViewCell" customModule="Booster" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1" width="375" height="40"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8pi-MM-Fm4" id="KX5-WG-Ul6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" id="JX8-NM-A2f">
-                                                            <rect key="frame" x="15" y="0.0" width="345" height="40"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gXS-Xr-hdJ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <animations/>
-                                                                    <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second shot on the 1st month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gee-gy-lrh">
-                                                                    <rect key="frame" x="47" y="11" width="283" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <animations/>
-                                                                    <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
-                                                                    <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vC0-Rg-ygb">
-                                                                    <rect key="frame" x="15" y="100" width="315" height="40"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <animations/>
-                                                                    <color key="backgroundColor" red="0.22352941179999999" green="0.87450980389999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="18"/>
-                                                                    <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                                                    <state key="normal" title="Complete">
-                                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </state>
-                                                                    <connections>
-                                                                        <action selector="didPressHepB2Complete:" destination="SPR-As-EVJ" eventType="touchUpInside" id="YIJ-T0-sdt"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Immunization_Step_2" id="hwl-CH-vVy">
-                                                                    <rect key="frame" x="15" y="10" width="22" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <animations/>
-                                                                </imageView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox-selected" id="n2m-cK-pLJ">
-                                                                    <rect key="frame" x="16" y="11" width="20" height="20"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <animations/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tCT-Af-6X2">
-                                                                    <rect key="frame" x="250" y="10" width="85" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <animations/>
-                                                                    <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="12"/>
-                                                                    <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <view contentMode="scaleToFill" id="3m9-RU-sIe" userLabel="Shot Date">
-                                                                    <rect key="frame" x="15" y="45" width="315" height="40"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G1b-Hg-6qm">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                            <animations/>
-                                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                                                            <connections>
-                                                                                <action selector="didPressDatePicker:" destination="SPR-As-EVJ" eventType="touchUpInside" id="BXA-B5-T9Z"/>
-                                                                            </connections>
-                                                                        </button>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NbP-dG-3IL">
-                                                                            <rect key="frame" x="15" y="10" width="153" height="20"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                            <animations/>
-                                                                            <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
-                                                                            <color key="textColor" red="0.66666666669999997" green="0.72156862749999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <animations/>
-                                                                </view>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cLL-re-EOr">
-                                                                    <rect key="frame" x="315" y="11" width="16" height="22"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <animations/>
-                                                                    <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                                                    <state key="normal" image="Close_Button"/>
-                                                                    <connections>
-                                                                        <action selector="didPressHepB2Close:" destination="SPR-As-EVJ" eventType="touchUpInside" id="Tad-4J-VVC"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
-                                                            <animations/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </view>
-                                                    </subviews>
-                                                    <animations/>
-                                                </tableViewCellContentView>
-                                                <animations/>
-                                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <connections>
-                                                    <outlet property="shotButton" destination="gXS-Xr-hdJ" id="xv4-SY-EVa"/>
-                                                    <outlet property="shotCloseButton" destination="cLL-re-EOr" id="Fa4-sz-mk0"/>
-                                                    <outlet property="shotCompleteButton" destination="vC0-Rg-ygb" id="RNl-uz-qts"/>
-                                                    <outlet property="shotDateLabel" destination="tCT-Af-6X2" id="5De-ov-NaC"/>
-                                                    <outlet property="shotDatePickerDoneButton" destination="G1b-Hg-6qm" id="hoY-zS-bhX"/>
-                                                    <outlet property="shotDatePickerLabel" destination="NbP-dG-3IL" id="8Pk-MO-g6J"/>
-                                                    <outlet property="shotDescriptionLabel" destination="gee-gy-lrh" id="Nhk-7y-ekv"/>
-                                                    <outlet property="shotIndicatorCompleteImage" destination="hwl-CH-vVy" id="Ahr-SY-UPV"/>
-                                                    <outlet property="shotIndicatorIncompleteImage" destination="n2m-cK-pLJ" id="yTK-Ei-GZG"/>
-                                                    <outlet property="shotView" destination="JX8-NM-A2f" id="ZH6-x9-SUX"/>
-                                                </connections>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -657,9 +628,18 @@
                         <outlet property="datePicker" destination="29V-rT-eUm" id="jca-qI-jLQ"/>
                         <outlet property="datePickerView" destination="wGy-CV-crp" id="DKu-Mc-FUf"/>
                         <outlet property="firstName" destination="2iO-xt-b8c" id="7uC-b7-vTJ"/>
+                        <outlet property="hepB2Button" destination="gXS-Xr-hdJ" id="iDm-Id-S3k"/>
+                        <outlet property="hepB2CloseButton" destination="cLL-re-EOr" id="HRJ-wq-JAF"/>
+                        <outlet property="hepB2CompleteBadge" destination="n2m-cK-pLJ" id="cJL-G0-0Wv"/>
+                        <outlet property="hepB2CompleteButton" destination="vC0-Rg-ygb" id="BEj-78-XjT"/>
+                        <outlet property="hepB2DateLabel" destination="tCT-Af-6X2" id="azm-ZI-Pl1"/>
+                        <outlet property="hepB2DatePickerLabel" destination="NbP-dG-3IL" id="cDf-Id-v0E"/>
+                        <outlet property="hepB2IncompleteBadge" destination="hwl-CH-vVy" id="fLa-IB-Zj5"/>
+                        <outlet property="hepB2Label" destination="gee-gy-lrh" id="rmK-pO-99Z"/>
+                        <outlet property="hepB2View" destination="JX8-NM-A2f" id="SIm-Bb-Whu"/>
                         <outlet property="moreAbout" destination="1dP-ms-PaW" id="M0U-De-yz6"/>
                         <outlet property="scrollView" destination="nUn-1b-Ipb" id="lJG-b9-qNH"/>
-                        <outlet property="tableView" destination="vV0-DZ-uI6" id="jFG-7t-uci"/>
+                        <outlet property="shotDateButton" destination="G1b-Hg-6qm" id="gcJ-uf-xaR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPK-ub-s1s" userLabel="First Responder" sceneMemberID="firstResponder"/>

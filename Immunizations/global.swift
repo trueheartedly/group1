@@ -16,6 +16,12 @@ var userMiddleInitial: String?
 var userLastName: String?
 var userBirthDate: NSDate?
 var userBirthDateString: String?
-var hepB2Date: NSDate?
 var userSex: String?
 var userPronoun: String?
+
+var hepB1Date: NSDate?
+var hepB1Complete: Bool?
+var hepB2Date: NSDate?
+var hepB2Complete: Bool?
+var hepB3Date: NSDate?
+var hepB3Complete: Bool?
