@@ -20,8 +20,17 @@
             <string>GothamRounded-Book</string>
             <string>GothamRounded-Book</string>
             <string>GothamRounded-Book</string>
+            <string>GothamRounded-Book</string>
+            <string>GothamRounded-Book</string>
+            <string>GothamRounded-Book</string>
+            <string>GothamRounded-Book</string>
+            <string>GothamRounded-Book</string>
+            <string>GothamRounded-Book</string>
+            <string>GothamRounded-Book</string>
         </mutableArray>
         <mutableArray key="GothamRnd-Medium.otf">
+            <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
@@ -477,20 +486,120 @@
                                         <color key="backgroundColor" red="0.96078431372549022" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Immunization_Detail" id="1dP-ms-PaW">
-                                        <rect key="frame" x="0.0" y="270" width="375" height="686"/>
+                                        <rect key="frame" x="0.0" y="280" width="375" height="686"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name's Progress" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2iO-xt-b8c">
-                                        <rect key="frame" x="22" y="21" width="345" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name's Progress" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2iO-xt-b8c">
+                                        <rect key="frame" x="20" y="21" width="335" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="16"/>
                                         <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Hepatitis B vaccine is given in a series of 3 shots:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IZU-3H-t8X">
+                                        <rect key="frame" x="20" y="60" width="335" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
+                                        <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="HBa-hb-Ffd">
+                                        <rect key="frame" x="15" y="120" width="345" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="D7K-q3-Hva">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <connections>
+                                                    <action selector="didPressHepB1:" destination="SPR-As-EVJ" eventType="touchUpInside" id="mOW-m3-Lf2"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First shot on day of birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0hF-De-zPY">
+                                                <rect key="frame" x="47" y="11" width="283" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
+                                                <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RUu-Pj-8Zg">
+                                                <rect key="frame" x="15" y="100" width="315" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.22352941179999999" green="0.87450980389999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <state key="normal" title="Complete">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressHepB1Complete:" destination="SPR-As-EVJ" eventType="touchUpInside" id="qdm-Mf-ztQ"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Immunization_Step_1" id="wcb-kT-OWn">
+                                                <rect key="frame" x="15" y="10" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox-selected" id="ZBp-vA-m70">
+                                                <rect key="frame" x="16" y="11" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TxR-t5-2re">
+                                                <rect key="frame" x="250" y="10" width="85" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="12"/>
+                                                <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="U60-V8-zcY" userLabel="Shot Date">
+                                                <rect key="frame" x="15" y="45" width="315" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FNL-7O-ywf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                        <connections>
+                                                            <action selector="didPressDatePicker:" destination="SPR-As-EVJ" eventType="touchUpInside" id="BNm-8M-Hca"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ayU-Wo-b74">
+                                                        <rect key="frame" x="15" y="10" width="153" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
+                                                        <color key="textColor" red="0.66666666669999997" green="0.72156862749999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EAn-e1-cZq">
+                                                <rect key="frame" x="315" y="11" width="16" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <state key="normal" image="Close_Button"/>
+                                                <connections>
+                                                    <action selector="didPressHepB1Close:" destination="SPR-As-EVJ" eventType="touchUpInside" id="Aa0-rN-3S7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" id="JX8-NM-A2f">
-                                        <rect key="frame" x="16" y="167" width="345" height="40"/>
+                                        <rect key="frame" x="16" y="170" width="345" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gXS-Xr-hdJ">
@@ -546,7 +655,7 @@
                                                 <rect key="frame" x="15" y="45" width="315" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G1b-Hg-6qm">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G1b-Hg-6qm">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <animations/>
@@ -574,48 +683,145 @@
                                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
                                                 <state key="normal" image="Close_Button"/>
                                                 <connections>
-                                                    <action selector="didPressHepB2:" destination="SPR-As-EVJ" eventType="touchUpInside" id="AeB-Qy-1o7"/>
-                                                    <action selector="didPressHepB2Close:" destination="SPR-As-EVJ" eventType="touchUpInside" id="Tad-4J-VVC"/>
+                                                    <action selector="didPressHepB2Close:" destination="SPR-As-EVJ" eventType="touchUpInside" id="3Ws-zG-i5p"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" id="wGy-CV-crp">
-                                        <rect key="frame" x="0.0" y="341" width="375" height="260"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="jlq-kB-vMw">
+                                        <rect key="frame" x="15" y="220" width="345" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="29V-rT-eUm">
-                                                <rect key="frame" x="1" y="44" width="375" height="216"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iIx-3n-9A1">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
-                                                <date key="date" timeIntervalSinceReferenceDate="467429017.28427798">
-                                                    <!--2015-10-25 01:23:37 +0000-->
-                                                </date>
-                                            </datePicker>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TBn-Lh-GgF">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <connections>
+                                                    <action selector="didPressHepB3:" destination="SPR-As-EVJ" eventType="touchUpInside" id="EBU-pX-xTE"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third shot on the 6th month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ajD-Ax-A2G">
+                                                <rect key="frame" x="47" y="11" width="283" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
+                                                <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qPe-WV-CSg">
+                                                <rect key="frame" x="15" y="100" width="315" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.22352941179999999" green="0.87450980389999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="14"/>
-                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
-                                                <state key="normal" title="Done">
+                                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <state key="normal" title="Complete">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="didPressDatePickerDone:" destination="SPR-As-EVJ" eventType="touchUpInside" id="fao-iC-mib"/>
+                                                    <action selector="didPressHepB3Complete:" destination="SPR-As-EVJ" eventType="touchUpInside" id="GHI-sO-HtG"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Immunization_Step_3" id="2hP-Fx-Ung">
+                                                <rect key="frame" x="15" y="10" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox-selected" id="KAo-vQ-ujP">
+                                                <rect key="frame" x="16" y="11" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CBI-VE-PDv">
+                                                <rect key="frame" x="250" y="10" width="85" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="12"/>
+                                                <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="1cC-pt-Igx" userLabel="Shot Date">
+                                                <rect key="frame" x="15" y="45" width="315" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C57-yB-2Pn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                        <connections>
+                                                            <action selector="didPressDatePicker:" destination="SPR-As-EVJ" eventType="touchUpInside" id="ZcW-CI-ZcZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wzP-1U-kvc">
+                                                        <rect key="frame" x="15" y="10" width="153" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
+                                                        <color key="textColor" red="0.66666666669999997" green="0.72156862749999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="czE-Ty-owL">
+                                                <rect key="frame" x="315" y="11" width="16" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                                <state key="normal" image="Close_Button"/>
+                                                <connections>
+                                                    <action selector="didPressHepB3Close:" destination="SPR-As-EVJ" eventType="touchUpInside" id="E7U-gt-yhk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </scrollView>
+                            <view hidden="YES" contentMode="scaleToFill" id="wGy-CV-crp">
+                                <rect key="frame" x="0.0" y="408" width="375" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view alpha="0.84999999999999998" contentMode="scaleToFill" id="Umb-7w-MJk" userLabel="Gray Below">
+                                        <rect key="frame" x="0.0" y="-343" width="375" height="603"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="29V-rT-eUm">
+                                        <rect key="frame" x="1" y="44" width="375" height="216"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <date key="date" timeIntervalSinceReferenceDate="467429017.28427798">
+                                            <!--2015-10-25 01:23:37 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TBn-Lh-GgF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.22352941179999999" green="0.87450980389999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressDatePickerDone:" destination="SPR-As-EVJ" eventType="touchUpInside" id="fao-iC-mib"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -628,18 +834,38 @@
                         <outlet property="datePicker" destination="29V-rT-eUm" id="jca-qI-jLQ"/>
                         <outlet property="datePickerView" destination="wGy-CV-crp" id="DKu-Mc-FUf"/>
                         <outlet property="firstName" destination="2iO-xt-b8c" id="7uC-b7-vTJ"/>
+                        <outlet property="hepB1Button" destination="D7K-q3-Hva" id="Jbg-2E-TKc"/>
+                        <outlet property="hepB1CloseButton" destination="EAn-e1-cZq" id="qhP-PR-UGg"/>
+                        <outlet property="hepB1CompleteBadge" destination="ZBp-vA-m70" id="MO7-4Z-4G7"/>
+                        <outlet property="hepB1CompleteButton" destination="RUu-Pj-8Zg" id="TRG-XU-70v"/>
+                        <outlet property="hepB1DateLabel" destination="TxR-t5-2re" id="vdj-0b-8rf"/>
+                        <outlet property="hepB1DatePickerButton" destination="FNL-7O-ywf" id="lwZ-nw-Ncg"/>
+                        <outlet property="hepB1DatePickerLabel" destination="ayU-Wo-b74" id="7sI-Di-4jI"/>
+                        <outlet property="hepB1IncompleteBadge" destination="wcb-kT-OWn" id="g2m-xJ-fx6"/>
+                        <outlet property="hepB1Label" destination="0hF-De-zPY" id="aTR-9C-cxk"/>
+                        <outlet property="hepB1View" destination="HBa-hb-Ffd" id="iIf-yd-Oq6"/>
                         <outlet property="hepB2Button" destination="gXS-Xr-hdJ" id="iDm-Id-S3k"/>
                         <outlet property="hepB2CloseButton" destination="cLL-re-EOr" id="HRJ-wq-JAF"/>
                         <outlet property="hepB2CompleteBadge" destination="n2m-cK-pLJ" id="cJL-G0-0Wv"/>
                         <outlet property="hepB2CompleteButton" destination="vC0-Rg-ygb" id="BEj-78-XjT"/>
                         <outlet property="hepB2DateLabel" destination="tCT-Af-6X2" id="azm-ZI-Pl1"/>
+                        <outlet property="hepB2DatePickerButton" destination="G1b-Hg-6qm" id="wi0-zP-6Mp"/>
                         <outlet property="hepB2DatePickerLabel" destination="NbP-dG-3IL" id="cDf-Id-v0E"/>
                         <outlet property="hepB2IncompleteBadge" destination="hwl-CH-vVy" id="fLa-IB-Zj5"/>
                         <outlet property="hepB2Label" destination="gee-gy-lrh" id="rmK-pO-99Z"/>
                         <outlet property="hepB2View" destination="JX8-NM-A2f" id="SIm-Bb-Whu"/>
+                        <outlet property="hepB3Button" destination="iIx-3n-9A1" id="MvE-ag-kOH"/>
+                        <outlet property="hepB3CloseButton" destination="czE-Ty-owL" id="MXX-FX-7Fk"/>
+                        <outlet property="hepB3CompleteBadge" destination="KAo-vQ-ujP" id="P78-kT-eJ8"/>
+                        <outlet property="hepB3CompleteButton" destination="qPe-WV-CSg" id="xfO-RA-Eg7"/>
+                        <outlet property="hepB3DateLabel" destination="CBI-VE-PDv" id="b9E-Sc-TfI"/>
+                        <outlet property="hepB3DatePickerButton" destination="C57-yB-2Pn" id="KcW-00-fVr"/>
+                        <outlet property="hepB3DatePickerLabel" destination="wzP-1U-kvc" id="SBN-dp-pnM"/>
+                        <outlet property="hepB3IncompleteBadge" destination="2hP-Fx-Ung" id="d1d-Qn-byR"/>
+                        <outlet property="hepB3Label" destination="ajD-Ax-A2G" id="VGT-H3-GQb"/>
+                        <outlet property="hepB3View" destination="jlq-kB-vMw" id="G1Y-Mm-CWT"/>
                         <outlet property="moreAbout" destination="1dP-ms-PaW" id="M0U-De-yz6"/>
                         <outlet property="scrollView" destination="nUn-1b-Ipb" id="lJG-b9-qNH"/>
-                        <outlet property="shotDateButton" destination="G1b-Hg-6qm" id="gcJ-uf-xaR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPK-ub-s1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -671,7 +897,9 @@
         <image name="Background_Pattern" width="375" height="180"/>
         <image name="Close_Button" width="16" height="16"/>
         <image name="Immunization_Detail" width="375" height="686"/>
+        <image name="Immunization_Step_1" width="21" height="22"/>
         <image name="Immunization_Step_2" width="22" height="22"/>
+        <image name="Immunization_Step_3" width="21" height="22"/>
         <image name="Immunizations_Timeline" width="375" height="667"/>
         <image name="Nav_Bar" width="375" height="65"/>
         <image name="avatar" width="96" height="96"/>
