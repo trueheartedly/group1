@@ -13,6 +13,7 @@ import UIKit
 
 class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UINavigationControllerDelegate, UIScrollViewDelegate {
     
+    // scroll view
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -43,7 +44,6 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var sexLabel: UILabel!
     var sexData: [String] = [String]()
 
-    
     // remind me notification toggle
     @IBOutlet weak var remindMeButton: UIButton!
     
@@ -61,17 +61,18 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        // prep scrollable area
         scrollView.contentSize = contentView.frame.size;
         
+        // prep image picker
+        imagePicker.delegate = self
         
-
+        // prep sex picker
         sexPicker.delegate = self
         sexPicker.dataSource = self
-        imagePicker.delegate = self
         sexData = ["F", "M"]
         userSex = "F" // set default in case user doesn't change input
-        
+
         // mask photo as a circle
         photoImageView.layer.cornerRadius = photoImageView.frame.size.height/2
         photoImageView.layer.masksToBounds = true
@@ -88,18 +89,13 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         datePickerContainer.hidden = true
         datePicker.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         
-        // date picker blurring
-// TO DO: MAKE BETTER
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-
         // hide sex picker
         sexPickerContainer.hidden = true
         
-        
+        // prep page scroll up when keyboard displays
         initialY = contentView.frame.origin.y
         
+        // set listeners for when keyboard shows / hides
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
@@ -142,6 +138,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     // on press of birthdate
     @IBAction func didPressBirthdate(sender: UIButton) {
+        sexPickerContainer.hidden = true
         datePickerContainer.hidden = false
         contentView.endEditing(true)
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
@@ -157,10 +154,10 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         userBirthDate = datePicker.date
-        hepBShot2Date = NSCalendar.currentCalendar().dateByAddingUnit(
+        hepB2Date = NSCalendar.currentCalendar().dateByAddingUnit(
             .Day,
             value: 60,
-            toDate: userBirthDate,
+            toDate: userBirthDate!,
             options: NSCalendarOptions(rawValue: 0))!
         
         //print("userBirthDate is \(userBirthDate)")
@@ -187,6 +184,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
 //--TO IMPLEMENT
     // on press of sex
     @IBAction func didPressSex(sender: UIButton) {
+        datePickerContainer.hidden = true
         sexPickerContainer.hidden = false
         contentView.endEditing(true)
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
@@ -230,8 +228,11 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         sexLabel.text = userSex
         sexLabel.textColor = UIColor(red: 3.0/255, green: 3.0/255, blue: 3.0/255, alpha: 1.0)
-
     }
+    
+    
+    
+    
     
     // REMIND ME ------------------------------------------------------------------
     
@@ -246,7 +247,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     // NEXT (FINISH) ------------------------------------------------------------------
 
-    @IBAction func didPressNext(sender: UIButton) {
+    @IBAction func didPressNext(sender: AnyObject) {
         //print("next button pressed")
         // consider enabled/disabled state for next button based on fields being successfully input
         
@@ -259,32 +260,40 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         
 // TO IMPLEMENT:
         userPhotoImage = photoImageView.image
-        
     }
     
     
     
     // MOVE CONTENT UP WHEN KEYBOARD SHOWING
-    func keyboardWillShow(notification: NSNotification!) {
+    func moveContentUp() {
         self.contentView.frame.origin = CGPoint(x: self.contentView.frame.origin.x, y: self.initialY + self.offset)
+    }
+    func moveContentToOrigin() {
+        sexPickerContainer.hidden = true
+        datePickerContainer.hidden = true
+            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+                self.contentView.frame.origin = CGPoint(x: self.contentView.frame.origin.x, y: self.initialY)
+
+            }) { (Bool) -> Void in
+        }
+    }
+    
+    func keyboardWillShow(notification: NSNotification!) {
+        moveContentUp()
     }
     
     func keyboardWillHide(notification: NSNotification!) {
-        self.contentView.frame.origin = CGPoint(x: self.contentView.frame.origin.x, y: self.initialY)
+        moveContentToOrigin()
     }
     
     
-    
-    
-// CONSIDER ADDING NEXT FUNCTIONALITY IN KEYBOARD
-
     @IBAction func didPressBackground(sender: AnyObject) {
         contentView.endEditing(true)
+        moveContentToOrigin()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

@@ -27,6 +27,7 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         // Point for handling the local notification when the app is open.
         // Showing reminder details in an alertview
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,13 +65,14 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         
         
         
+        if hepB2Date != nil{
         
         // calculate time before next hep b shot is due
         let calendar: NSCalendar = NSCalendar.currentCalendar()
         
         // Replace the hour (time) of both dates with 00:00
         let date1 = calendar.startOfDayForDate(NSDate())
-        let date2 = calendar.startOfDayForDate(hepBShot2Date)
+        let date2 = calendar.startOfDayForDate(hepB2Date!)
         
         //let flags = NSCalendarUnit.DayCalendarUnit
         let components = calendar.components(.Day, fromDate: date1, toDate: date2, options: [])
@@ -95,6 +97,8 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
             
             UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
         }
+        }
+        
     }
 
     
