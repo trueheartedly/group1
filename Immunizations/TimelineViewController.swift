@@ -126,6 +126,22 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
     
     
     
+    @IBAction func didPressShare(sender: AnyObject) {
+        
+        let textToShare = "\(userFirstName)'s Immunization Record"
+        
+        if let myWebsite = NSURL(string: "")
+        {
+            let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //New Excluded Activities Code
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            //
+            
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
     
     
     

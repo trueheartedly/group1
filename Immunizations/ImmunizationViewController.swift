@@ -68,7 +68,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     
 
-    @IBOutlet weak var moreAbout: UIImageView!
+    @IBOutlet weak var moreAboutView: UIView!
     var moreAboutOriginY: CGFloat!
     
     var applyDatePickerTo: Int!
@@ -82,12 +82,12 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        moreAboutOriginY = moreAbout.frame.origin.y
+        moreAboutOriginY = moreAboutView.frame.origin.y
         hepB2OriginY = hepB2View.frame.origin.y
         hepB3OriginY = hepB3View.frame.origin.y
 
         scrollView.delegate = self
-        scrollView.contentSize.height = moreAbout.image!.size.height + moreAboutOriginY
+        scrollView.contentSize.height = moreAboutView.frame.size.height + moreAboutOriginY + 60
 
         
         firstName.text = userFirstName! + "’s Progress"
@@ -124,7 +124,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
                 self.hepB1View.frame.size.height = 160
                 self.hepB2View.frame.origin.y += 120
                 self.hepB3View.frame.origin.y += 120
-                self.moreAbout.frame.origin.y += 120
+                self.moreAboutView.frame.origin.y += 120
                 self.hepB1View.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
                 self.hepB1DateLabel.hidden = true
                 self.hepB1CloseButton.hidden = false
@@ -139,7 +139,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
                 self.hepB1View.frame.size.height = 40
                 self.hepB2View.frame.origin.y -= 120
                 self.hepB3View.frame.origin.y -= 120
-                self.moreAbout.frame.origin.y -= 120
+                self.moreAboutView.frame.origin.y -= 120
                 self.hepB1DateLabel.hidden = false
                 self.hepB1CloseButton.hidden = true
                 self.hepB1Button.enabled = true
@@ -156,7 +156,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
                 self.hepB2View.frame.size.height = 160
                 self.hepB3View.frame.origin.y += 120
-                self.moreAbout.frame.origin.y += 120
+                self.moreAboutView.frame.origin.y += 120
                 self.hepB2View.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
                 self.hepB2DateLabel.hidden = true
                 self.hepB2CloseButton.hidden = false
@@ -170,7 +170,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
                 self.hepB2View.frame.size.height = 40
                 self.hepB3View.frame.origin.y -= 120
-                self.moreAbout.frame.origin.y -= 120
+                self.moreAboutView.frame.origin.y -= 120
                 self.hepB2DateLabel.hidden = false
                 self.hepB2CloseButton.hidden = true
                 self.hepB2Button.enabled = true
@@ -186,7 +186,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
         if hepB3Open == false {
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
                 self.hepB3View.frame.size.height = 160
-                self.moreAbout.frame.origin.y += 120
+                self.moreAboutView.frame.origin.y += 120
                 self.hepB3View.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
                 self.hepB3DateLabel.hidden = true
                 self.hepB3CloseButton.hidden = false
@@ -199,7 +199,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
             print("time to close b3")
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
                 self.hepB3View.frame.size.height = 40
-                self.moreAbout.frame.origin.y -= 120
+                self.moreAboutView.frame.origin.y -= 120
                 self.hepB3DateLabel.hidden = false
                 self.hepB3CloseButton.hidden = true
                 self.hepB3Button.enabled = true
@@ -340,6 +340,9 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    @IBAction func didPressCDCLink(sender: AnyObject) {
+        
+    }
     
     func showHideBadges() {
         

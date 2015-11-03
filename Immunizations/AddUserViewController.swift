@@ -163,6 +163,9 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         //print("userBirthDate is \(userBirthDate)")
         //print("hepBShot2 due date is \(hepBShot2Date)")
         userBirthDateString = dateFormatter.stringFromDate(datePicker.date)
+        dateLabel.text = userBirthDateString
+        dateLabel.textColor = UIColor(red: 3.0/255, green: 3.0/255, blue: 3.0/255, alpha: 1.0)
+
     }
 
     // on press of done date picker
@@ -215,6 +218,8 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
         userSex = sexData[row]
+        sexLabel.text = userSex
+        sexLabel.textColor = UIColor(red: 3.0/255, green: 3.0/255, blue: 3.0/255, alpha: 1.0)
     }
     
     // on press of done sex picker
@@ -250,16 +255,42 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func didPressNext(sender: AnyObject) {
         //print("next button pressed")
         // consider enabled/disabled state for next button based on fields being successfully input
+//        if firstNameTextField.text != "" && middleInitialTextField.text != ""  && lastNameTextField.text != ""  && dateLabel.text != ""  && sexLabel.text != "" {
+//            performSegueWithIdentifier("CreateRecord", sender: nil)
+//            
+//            // set global variables for use on subsequent screens
+//            userFirstName = firstNameTextField.text
+//            userMiddleInitial = middleInitialTextField.text
+//            userLastName = lastNameTextField.text
+//            userBirthDateString = dateLabel.text
+//            userPhotoImage = photoImageView.image
+        if firstNameTextField.text != "asdfasfd" {
+                performSegueWithIdentifier("CreateRecord", sender: nil)
+                
+                // set global variables for use on subsequent screens
+                userFirstName = firstNameTextField.text
+                userMiddleInitial = middleInitialTextField.text
+                userLastName = lastNameTextField.text
+                userBirthDateString = dateLabel.text
+                userPhotoImage = photoImageView.image
         
-        // set global variables for use on subsequent screens
-        userFirstName = firstNameTextField.text
-        userMiddleInitial = middleInitialTextField.text
-        userLastName = lastNameTextField.text
-        userBirthDateString = dateLabel.text
-        //userSex = sexLabel.text
-        
-// TO IMPLEMENT:
-        userPhotoImage = photoImageView.image
+        } else {
+            
+            let alertView = UIAlertController(title: "Please Complete All Info", message: "", preferredStyle: .Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                
+                // ...
+                
+            }
+            alertView.addAction(okAction)
+
+            self.presentViewController(alertView, animated: true) {
+                // ...
+            }
+            
+        }
+
     }
     
     

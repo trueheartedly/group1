@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C0066951BE6C59100B1ACF3 /* ShotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0066941BE6C59100B1ACF3 /* ShotTableViewCell.swift */; };
+		2C00669D1BE86DA800B1ACF3 /* ShotOnCDCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00669C1BE86DA800B1ACF3 /* ShotOnCDCViewController.swift */; };
 		2C10889B1BDC134E00CB19E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C10889A1BDC134E00CB19E2 /* AppDelegate.swift */; };
 		2C1088A21BDC134E00CB19E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C1088A11BDC134E00CB19E2 /* Assets.xcassets */; };
 		2C1088A51BDC134E00CB19E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1088A31BDC134E00CB19E2 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		2C0066941BE6C59100B1ACF3 /* ShotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotTableViewCell.swift; sourceTree = "<group>"; };
+		2C00669C1BE86DA800B1ACF3 /* ShotOnCDCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotOnCDCViewController.swift; path = Immunizations/ShotOnCDCViewController.swift; sourceTree = "<group>"; };
 		2C1088971BDC134D00CB19E2 /* Booster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C10889A1BDC134E00CB19E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C1088A11BDC134E00CB19E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		2C10888E1BDC134D00CB19E2 = {
 			isa = PBXGroup;
 			children = (
+				2C00669C1BE86DA800B1ACF3 /* ShotOnCDCViewController.swift */,
 				2C96DA481BE31F8A0008901F /* Resources */,
 				2C1088991BDC134E00CB19E2 /* Booster */,
 				2C1088981BDC134D00CB19E2 /* Products */,
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C361EDC1BDD7559000A28C6 /* Global.swift in Sources */,
+				2C00669D1BE86DA800B1ACF3 /* ShotOnCDCViewController.swift in Sources */,
 				2C10889B1BDC134E00CB19E2 /* AppDelegate.swift in Sources */,
 				2C1088AD1BDC1D1700CB19E2 /* AddUserViewController.swift in Sources */,
 				2C361EE01BDDD116000A28C6 /* ImmunizationViewController.swift in Sources */,
