@@ -47,6 +47,9 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     // remind me notification toggle
     @IBOutlet weak var remindMeButton: UIButton!
     
+    // create record button
+    @IBOutlet weak var createButton: UIButton!
+   
     // move content up when keyboard appears
     var initialY: CGFloat!
     let offset: CGFloat = -150
@@ -98,6 +101,14 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         // set listeners for when keyboard shows / hides
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        // enable/disable create button
+//        if firstNameTextField.text == "" || middleInitialTextField.text == "" || lastNameTextField.text == "" || dateLabel.text == "" || sexLabel.text == "" {
+//                createButton.backgroundColor = UIColor.grayColor()
+//        } else {
+//            createButton.backgroundColor = UIColor.greenColor()
+//        }
+        
     }
 
     
@@ -252,7 +263,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     // NEXT (FINISH) ------------------------------------------------------------------
 
-    @IBAction func didPressNext(sender: AnyObject) {
+    @IBAction func didPressCreateRecord(sender: AnyObject) {
         //print("next button pressed")
         // consider enabled/disabled state for next button based on fields being successfully input
 //        if firstNameTextField.text != "" && middleInitialTextField.text != ""  && lastNameTextField.text != ""  && dateLabel.text != ""  && sexLabel.text != "" {

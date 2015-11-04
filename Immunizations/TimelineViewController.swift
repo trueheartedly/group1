@@ -32,6 +32,7 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // set pronoun of user
         if userSex == "M" {
             userPronoun = "his"
         } else {
@@ -43,13 +44,13 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize = contentView.frame.size
  
         self.title = userFirstName! + "’s Vaccinations"
-        
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 31/255, green: 29/255, blue: 75/255, alpha: 1)
-        
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+//
+//        self.navigationController?.navigationBar.barTintColor = UIColor(red: 31/255, green: 29/255, blue: 75/255, alpha: 1)
+//        
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
         
         
         photoImageView.image = userPhotoImage
@@ -64,66 +65,40 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         birthdate?.text = userBirthDateString
         
         
+        // NOTIFICATION LOGIC
         
         if hepB2Date != nil{
-        
-        // calculate time before next hep b shot is due
-        let calendar: NSCalendar = NSCalendar.currentCalendar()
-        
-        // Replace the hour (time) of both dates with 00:00
-        let date1 = calendar.startOfDayForDate(NSDate())
-        let date2 = calendar.startOfDayForDate(hepB2Date!)
-        
-        //let flags = NSCalendarUnit.DayCalendarUnit
-        let components = calendar.components(.Day, fromDate: date1, toDate: date2, options: [])
-        
-        let daysToHepShot2Due = components.day  // This will return the number of day(s) between dates
-        
-        
-        
-        print(daysToHepShot2Due)
-        
-        
-        
-        
-        // SET NOTIFICATION
-        
-        if userReceiveReminders == true {
-            localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
-            localNotification.alertBody = "\(userFirstName!) is due for \(userPronoun!) Hepatitis B Vaccination in \(daysToHepShot2Due) days"
-            localNotification.timeZone = NSTimeZone.defaultTimeZone()
-            localNotification.soundName = UILocalNotificationDefaultSoundName
-            localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
             
-            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-        }
+            // calculate time before next hep b shot is due
+            let calendar: NSCalendar = NSCalendar.currentCalendar()
+            
+            // Replace the hour (time) of both dates with 00:00
+            let date1 = calendar.startOfDayForDate(NSDate())
+            let date2 = calendar.startOfDayForDate(hepB2Date!)
+            
+            //let flags = NSCalendarUnit.DayCalendarUnit
+            let components = calendar.components(.Day, fromDate: date1, toDate: date2, options: [])
+            
+            let daysToHepShot2Due = components.day  // This will return the number of day(s) between dates
+            
+            
+            print(daysToHepShot2Due)
+            
+            
+            // SET NOTIFICATION
+            
+            if userReceiveReminders == true {
+                localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+                localNotification.alertBody = "\(userFirstName!) is due for \(userPronoun!) Hepatitis B Vaccination in \(daysToHepShot2Due) days"
+                localNotification.timeZone = NSTimeZone.defaultTimeZone()
+                localNotification.soundName = UILocalNotificationDefaultSoundName
+                localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+                
+                UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+            }
         }
         
     }
-
-    
-    
-    
-    // hide nav bar
-    
-//    override func viewWillAppear(animated: Bool) {
-//        navigationController?.navigationBarHidden = true
-//        super.viewWillAppear(animated)
-//    }
-//    
-//    
-//    override func viewWillDisappear(animated: Bool) {
-//        if (navigationController?.topViewController != self) {
-//            navigationController?.navigationBarHidden = false
-//        }
-//        super.viewWillDisappear(animated)
-//    }
-//    
-//    
-    
-    
-    
-    
     
     
     @IBAction func didPressShare(sender: AnyObject) {
@@ -145,20 +120,6 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
     
     // MARK: - Navigation
 

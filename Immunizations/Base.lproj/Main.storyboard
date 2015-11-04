@@ -255,13 +255,13 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.22352941176470587" green="0.87450980392156863" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.22352941179999999" green="0.87450980389999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="18"/>
                                 <state key="normal" title="Create Record">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didPressNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iQc-5x-E4K"/>
+                                    <action selector="didPressCreateRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aWS-M5-LaT"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="NtL-2g-0ng">
@@ -332,6 +332,7 @@
                     <connections>
                         <outlet property="birthdateButton" destination="F9M-4a-dMe" id="d7H-UZ-aTI"/>
                         <outlet property="contentView" destination="ETX-YQ-bK2" id="7Mo-71-joe"/>
+                        <outlet property="createButton" destination="Cog-Cw-5bG" id="8Hk-xh-Mis"/>
                         <outlet property="dateLabel" destination="Aq0-BG-Aiq" id="gUk-vM-inF"/>
                         <outlet property="datePicker" destination="HWN-P1-aim" id="C7J-hR-bDo"/>
                         <outlet property="datePickerContainer" destination="2De-gz-jYs" id="9gs-uZ-ytW"/>
@@ -429,6 +430,15 @@
                                                     <segue destination="BYZ-38-t0r" kind="modal" id="ny2-up-qP5"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FAE-Pc-af3">
+                                                <rect key="frame" x="316" y="23" width="40" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <state key="normal" title="Share"/>
+                                                <connections>
+                                                    <action selector="didPressShare:" destination="exv-x2-jvP" eventType="touchUpInside" id="LGJ-MV-OZy"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                     </view>
@@ -449,13 +459,10 @@
                         <barButtonItem key="backBarButtonItem" title="Item" id="gNc-NS-cce"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="5rB-VO-5VN">
                             <color key="tintColor" red="0.22352941179999999" green="0.87450980389999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="didPressShare:" destination="exv-x2-jvP" id="hqa-su-w68"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="birthdate" destination="qYy-P8-382" id="8Oi-xz-Ceq"/>
@@ -954,9 +961,10 @@
         <!--Navigation Controller-->
         <scene sceneID="toc-r0-jjX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hGv-fF-52n" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hGv-fF-52n" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="CmE-ZK-gNK"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Kdn-Qn-hMZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
