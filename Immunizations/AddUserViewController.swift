@@ -73,8 +73,8 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         // prep sex picker
         sexPicker.delegate = self
         sexPicker.dataSource = self
-        sexData = ["F", "M"]
-        userSex = "F" // set default in case user doesn't change input
+        sexData = ["Female", "Male"]
+        userSex = "Female" // set default in case user doesn't change input
 
         // mask photo as a circle
         photoImageView.layer.cornerRadius = photoImageView.frame.size.height/2
@@ -280,7 +280,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
 //            userLastName = lastNameTextField.text
 //            userBirthDateString = dateLabel.text
 //            userPhotoImage = photoImageView.image
-        if firstNameTextField.text != "asdfasfd" {
+        if firstNameTextField.text != "" && middleInitialTextField.text != "" && lastNameTextField.text != "" && dateLabel.text != "" && sexLabel.text != "" {
                 performSegueWithIdentifier("CreateRecord", sender: nil)
                 
                 // set global variables for use on subsequent screens

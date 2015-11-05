@@ -428,8 +428,13 @@
                                         <rect key="frame" x="0.0" y="180" width="375" height="531"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Immunizations_View" id="glT-M7-Bn3">
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Immunizations_Timeline" id="glT-M7-Bn3">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="744"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <animations/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Shot_Badge_Overdue" id="Eh4-G5-DrJ">
+                                                <rect key="frame" x="187" y="170" width="56" height="18"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <animations/>
                                             </imageView>
@@ -440,7 +445,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mtq-Hj-Qiy">
-                                                <rect key="frame" x="17" y="102" width="340" height="57"/>
+                                                <rect key="frame" x="17" y="159" width="340" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <connections>
@@ -518,7 +523,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" id="LlD-eH-YZv">
-                                        <rect key="frame" x="-2" y="0.0" width="377" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="shield" id="A4C-qu-vo0">
@@ -572,6 +577,8 @@
                         <outlet property="screenView" destination="mgS-1P-9Yl" id="qQq-Ph-clW"/>
                         <outlet property="scrollView" destination="fbc-jh-Aj0" id="jER-9y-HHN"/>
                         <outlet property="shieldImage" destination="A4C-qu-vo0" id="CkB-qY-gsy"/>
+                        <outlet property="shotBadgeOverdueImage" destination="Eh4-G5-DrJ" id="Nx9-ri-x20"/>
+                        <outlet property="shotButton" destination="mtq-Hj-Qiy" id="d32-Lw-SWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYQ-Ma-4E2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1143,8 +1150,9 @@
         <image name="Immunization_Step_1" width="21" height="22"/>
         <image name="Immunization_Step_2" width="22" height="22"/>
         <image name="Immunization_Step_3" width="21" height="22"/>
-        <image name="Immunizations_View" width="375" height="744"/>
+        <image name="Immunizations_Timeline" width="375" height="744"/>
         <image name="Nav_Bar" width="375" height="65"/>
+        <image name="Shot_Badge_Overdue" width="56" height="18"/>
         <image name="avatar" width="96" height="96"/>
         <image name="avatar_s" width="27" height="27"/>
         <image name="back" width="13" height="20"/>

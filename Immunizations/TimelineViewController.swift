@@ -17,6 +17,8 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var shieldImage: UIImageView!
     @IBOutlet var screenView: UIView!
     
+    @IBOutlet weak var shotBadgeOverdueImage: UIImageView!
+    
     var images: [UIImage]!
     var animatedImage: UIImage!
     
@@ -34,13 +36,14 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
 //--IMMUNIZATION
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var contentView: UIImageView!
 
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var avatarButton: UIButton!
     var viewOriginalY: CGFloat!
-    
+    @IBOutlet weak var shotButton: UIButton!
+   
     
 
     
@@ -58,6 +61,7 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         // Showing reminder details in an alertview
     }
 
+    
     
 // TRIGGER LOADING ANIMATION
     
@@ -85,12 +89,23 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         loadingImage.image = animatedImage*/
         
         
-        UIView.animateWithDuration(0.5, delay: 4, options: [], animations:{ () -> Void in
+        UIView.animateWithDuration(0.5, delay: 2.5, options: [], animations:{ () -> Void in
             
             self.loadingView.alpha = 0
             self.shieldImage.alpha = 0
             
             }, completion:{ (Bool) -> Void in })
+        
+        // if hepb1 complete, show so
+
+        print("hepb1 is complete = \(hepB1Complete)")
+        if hepB1Complete == true {
+            contentView.image = UIImage(named: "Immunization_Timeline_HepB")
+            shotBadgeOverdueImage.hidden = true
+            shotButton.frame.origin.y = 245
+        } else {
+            shotBadgeOverdueImage.hidden = false
+        }
     }
     
     
@@ -122,7 +137,7 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         //pageTitle.text = userFirstName! + "’s Vaccinations"
         firstName.text = userFirstName! + "’s Birthday"
         birthdate?.text = userBirthDateString
-        
+    
         
         // NOTIFICATION LOGIC
         

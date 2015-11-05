@@ -55,9 +55,9 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
     var hepB3OriginY: CGFloat!
 
     
-    var hepB1Complete:Bool = false
-    var hepB2Complete:Bool = false
-    var hepB3Complete:Bool = false
+    //var hepB1Complete:Bool = false
+    //var hepB2Complete:Bool = false
+    //var hepB3Complete:Bool = false
     
     var hepB1Open:Bool = false
     var hepB2Open:Bool = false
@@ -215,6 +215,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
         print(hepB1Date)
         if hepB1Date != nil{
             hepB1Complete = true
+            print("HEP B1 COMPLETE!")
             didPressHepB1()
             hepB1Label.text = "Completed!"
             hepB1Label.textColor = UIColor(red:57/255.0, green:223/255.0, blue:183/255.0, alpha: 1.0)
@@ -346,6 +347,7 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func onBack(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
+        
     }
 
     func showHideBadges() {
@@ -377,7 +379,8 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    
+
+
     
     
     
