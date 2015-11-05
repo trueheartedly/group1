@@ -10,16 +10,46 @@ import UIKit
 
 class TimelineViewController: UIViewController, UIScrollViewDelegate {
     
+//--LOADING ANIMATION
+    
+    @IBOutlet weak var loadingImage: UIImageView!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var shieldImage: UIImageView!
+    @IBOutlet var screenView: UIView!
+    
+    var images: [UIImage]!
+    var animatedImage: UIImage!
+    
+    var loading_1: UIImage!
+    var loading_2: UIImage!
+    var loading_3: UIImage!
+    var loading_4: UIImage!
+    var loading_5: UIImage!
+    var loading_6: UIImage!
+    var loading_7: UIImage!
+    var loading_8: UIImage!
+
+    
+    
+//--IMMUNIZATION
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
 
     @IBOutlet weak var photoImageView: UIImageView!
+    
+    @IBOutlet weak var avatarButton: UIButton!
+    var viewOriginalY: CGFloat!
+    
+    
 
+    
 //--TO IMPLEMENT: PRESERVE PHOTO FROM PRIOR SCREEN
     
     @IBOutlet weak var firstName: UILabel!
     @IBOutlet weak var birthdate: UILabel!
-    
+    @IBOutlet weak var screenLabel: UILabel!
+
     var localNotification = UILocalNotification()
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
@@ -28,6 +58,43 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         // Showing reminder details in an alertview
     }
 
+    
+// TRIGGER LOADING ANIMATION
+    
+    override func viewDidAppear(animated: Bool){
+        
+        //     shieldBounce()
+        
+        UIView.animateWithDuration(1, delay: 0, options: [UIViewAnimationOptions.Repeat], animations:{ () -> Void in
+            self.loadingImage.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
+            }, completion:{ (Bool) -> Void in })
+        
+        loading_1 = UIImage(named: "loadingcircle-1")
+        loading_2 = UIImage(named: "loadingcirlce-2")
+        loading_3 = UIImage(named: "loadingcircle-3")
+        loading_4 = UIImage(named: "loadingcircle-4")
+        loading_5 = UIImage(named: "loadingcirlce-5")
+        loading_6 = UIImage(named: "loadingcircle-6")
+        loading_7 = UIImage(named: "loadingcircle-7")
+        loading_8 = UIImage(named: "loadingcircle-8")
+        
+        /* images = [loading_1, loading_2, loading_3]
+        
+        
+        animatedImage = UIImage.animatedImageWithImages(images,duration: 1.0)
+        loadingImage.image = animatedImage*/
+        
+        
+        UIView.animateWithDuration(0.5, delay: 4, options: [], animations:{ () -> Void in
+            
+            self.loadingView.alpha = 0
+            self.shieldImage.alpha = 0
+            
+            }, completion:{ (Bool) -> Void in })
+    }
+    
+    
+//-- VIEW DID LOAD
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,17 +108,9 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         
 
         scrollView.delegate = self
-        scrollView.contentSize = contentView.frame.size
- 
-        self.title = userFirstName! + "’s Vaccinations"
-//        
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-//
-//        self.navigationController?.navigationBar.barTintColor = UIColor(red: 31/255, green: 29/255, blue: 75/255, alpha: 1)
-//        
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-        
+        scrollView.contentSize = CGSize(width: 375, height: 744)
+        viewOriginalY = scrollView.frame.origin.y
+        screenLabel.text = userFirstName! + "’s Immunizations"
         
         photoImageView.image = userPhotoImage
         
@@ -99,7 +158,44 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         }
         
     }
+    func scrollViewDidScroll(scrollView: UIScrollView){
+        //print("scrolling")
+        print(scrollView.contentOffset.y)
+        print(scrollView.frame.origin.y)
+        
+        scrollView.frame.origin.y = viewOriginalY - scrollView.contentOffset.y
+        
+        if scrollView.contentOffset.y >= 104{
+            scrollView.frame.origin.y = 76
+        }
+        // avatarButton.alpha = 0
+        updateTransform(photoImageView, offset: scrollView.contentOffset.y)
+        
+    }
     
+    func updateTransform(photoImageView: UIView, offset: CGFloat) {
+        
+        let avatar_ty = convertValue(scrollView.contentOffset.y, r1Min: 0, r1Max: 104, r2Min: 0, r2Max: -34)
+        
+        let avatar_tx = convertValue(scrollView.contentOffset.y, r1Min: 0, r1Max: 104, r2Min: 0, r2Max: -74)
+        
+        let avatar_scale = convertValue(scrollView.contentOffset.y, r1Min: 0, r1Max: 104, r2Min: 1, r2Max: 0.74)
+        
+        let label_ty = convertValue(scrollView.contentOffset.y, r1Min: 0, r1Max: 104, r2Min: 0, r2Max: 0)
+        
+        let label_tx = convertValue(scrollView.contentOffset.y, r1Min: 0, r1Max: 104, r2Min: 0, r2Max: 5)
+        
+        photoImageView.transform = CGAffineTransformMakeTranslation(avatar_tx, avatar_ty)
+        photoImageView.transform = CGAffineTransformScale(photoImageView.transform, avatar_scale, avatar_scale)
+        avatarButton.transform = CGAffineTransformMakeTranslation(avatar_tx, avatar_ty)
+        avatarButton.transform = CGAffineTransformScale(photoImageView.transform, avatar_scale, avatar_scale)
+        
+        screenLabel.transform = CGAffineTransformMakeTranslation(label_tx, label_ty)
+        
+        
+        
+        
+    }
     
     @IBAction func didPressShare(sender: AnyObject) {
         
@@ -119,14 +215,23 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    func shieldBounce(){
+        UIView.animateWithDuration(0.8, delay: 0, options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat], animations: { () -> Void in
+            self.shieldImage.transform = CGAffineTransformMakeTranslation(0, -5)
+            }, completion: nil)
+    }
+    
+    func loadAnimation(){
+        
+        
+        
+    }
     
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
     }
 
 

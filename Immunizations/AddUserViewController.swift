@@ -103,13 +103,8 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
         // enable/disable create button
-//        if firstNameTextField.text == "" || middleInitialTextField.text == "" || lastNameTextField.text == "" || dateLabel.text == "" || sexLabel.text == "" {
-//                createButton.backgroundColor = UIColor.grayColor()
-//        } else {
-//            createButton.backgroundColor = UIColor.greenColor()
-//        }
-        
-    }
+        areAllFieldsComplete()
+}
 
     
     
@@ -149,9 +144,9 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     // on press of birthdate
     @IBAction func didPressBirthdate(sender: UIButton) {
+        contentView.endEditing(true)
         sexPickerContainer.hidden = true
         datePickerContainer.hidden = false
-        contentView.endEditing(true)
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
             
             self.contentView.frame.origin = CGPoint(x: self.contentView.frame.origin.x, y: self.initialY + self.offset)
@@ -189,6 +184,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         dateLabel.text = userBirthDateString
         dateLabel.textColor = UIColor(red: 3.0/255, green: 3.0/255, blue: 3.0/255, alpha: 1.0)
+        areAllFieldsComplete()
 
     }
     
@@ -244,6 +240,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         sexLabel.text = userSex
         sexLabel.textColor = UIColor(red: 3.0/255, green: 3.0/255, blue: 3.0/255, alpha: 1.0)
+        areAllFieldsComplete()
     }
     
     
@@ -262,6 +259,14 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     
 
     // NEXT (FINISH) ------------------------------------------------------------------
+    func areAllFieldsComplete() {
+        if firstNameTextField.text == "" || middleInitialTextField.text == "" || lastNameTextField.text == "" || dateLabel.text == "Birthdate" || sexLabel.text == "Sex" {
+            createButton.backgroundColor = UIColor(red: 176.0/255, green: 175.0/255, blue: 192.0/255, alpha: 1.0)
+        } else {
+            createButton.backgroundColor = UIColor(red: 57.0/255, green: 223.0/255, blue: 183.0/255, alpha: 1.0)
+
+        }
+    }
 
     @IBAction func didPressCreateRecord(sender: AnyObject) {
         //print("next button pressed")
@@ -326,6 +331,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func keyboardWillHide(notification: NSNotification!) {
         moveContentToOrigin()
+        areAllFieldsComplete()
     }
     
     

@@ -344,6 +344,10 @@ class ImmunizationViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    @IBAction func onBack(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+
     func showHideBadges() {
         
         if hepB1Complete == true {
