@@ -629,7 +629,7 @@
                                 <animations/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nUn-1b-Ipb">
-                                <rect key="frame" x="0.0" y="66" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="607"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view alpha="0.85000002384185791" contentMode="scaleToFill" id="ZY3-kS-5CM" userLabel="Gray Below">
