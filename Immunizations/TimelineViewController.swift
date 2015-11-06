@@ -115,7 +115,7 @@ class TimelineViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         // set pronoun of user
-        if userSex == "M" {
+        if userSex == "Male" {
             userPronoun = "his"
         } else {
             userPronoun = "her"
